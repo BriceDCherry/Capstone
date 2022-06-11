@@ -6,34 +6,13 @@
 <main>
   <h2>Houses</h2>
   <ul>
-    <li>
+    <li *ngFor="let house of houses">
       <app-house 
-        [name]="'Gryffindor'"
-        [imageUrl]="'https://www.logolynx.com/images/logolynx/53/5390e974544de6279c4d9cb6253e3a2c.jpeg'"
-        [details]="'House details'"
+        [name]="house.name"
+        [imageUrl]="house.imageUrl"
+        [details]="house.details"
         >
       </app-house>
     </li>
   </ul>
-  <ul>
-    <li>
-      <app-house 
-        [name]="'Gryffindor'"
-        [imageUrl]="'https://i.pinimg.com/originals/44/d4/5f/44d45f5786e8371255e8332e8bc456c5.jpg'"
-        [details]="'House details'"
-        >
-      </app-house>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <app-house 
-        [name]="'Gryffindor'"
-        [imageUrl]="'https://i.pinimg.com/originals/44/d4/5f/44d45f5786e8371255e8332e8bc456c5.jpg'"
-        [details]="'House details'"
-        >
-      </app-house>
-    </li>
-  </ul>
-
 </main>
