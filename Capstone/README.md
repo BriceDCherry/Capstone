@@ -1,3 +1,7 @@
+Deplyed Site link: 
+
+This Capstone is The Sorting Hat, it will place you into the hogwarts house that best suits you.
+
 # Capstone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
