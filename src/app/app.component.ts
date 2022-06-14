@@ -15,8 +15,8 @@ export class AppComponent implements OnInit {
   
   
   ngOnInit(): void {
-    this.houseService.fetchHouses().subscribe((houses: House[]) => {
-      this.houses = houses
+    this.houseService.fetchHouses().subscribe(response => {
+      this.houses = response.houses
     })
   }
 }

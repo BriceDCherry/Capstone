@@ -1,7 +1,13 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
 import { House } from './models/House';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
+type HouseRepsonse = {
+  houses: House[];
+}
+
+const housesEndpoint = environment.housesEndpoint
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +31,12 @@ export class HouseService {
     details: "House details", 
   }]
 
+  constructor(private http: HttpClient) {
+
+  }
+
   fetchHouses() {
-    return of(this.house)
+    return this.http.get<HouseRepsonse>(housesEndpoint)
   }
 
 }
