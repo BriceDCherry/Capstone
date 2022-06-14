@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { HouseService } from './house.service';
-import {House} from './models/House';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -8,15 +6,6 @@ import {House} from './models/House';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  houses: House[] = []
-
-  constructor(private houseService: HouseService) {}
-  
-  
-  ngOnInit(): void {
-    this.houseService.fetchHouses().subscribe(response => {
-      this.houses = response.houses
-    })
-  }
+export class AppComponent  {
+ 
 }

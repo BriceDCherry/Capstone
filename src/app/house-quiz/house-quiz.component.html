@@ -1,0 +1,18 @@
+<div class="image">
+    <img src="https://i.pinimg.com/originals/eb/0f/bf/eb0fbfc1b0e4af0e249ec909f93e5893.png"/>
+</div>
+<div>
+    <h4>The Sorting Hat</h4>
+    <span>Let's find you a house!</span>
+</div>
+<form #sortForm="ngForm" class="sort-form" (ngSubmit)="sort()">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Harry Potter, etc." [(ngModel)]="name" required >
+    <label for="title">Title</label>
+    <select name="service-level">
+        <option value="wizard">Wizard</option>
+        <option value="witch">Witch</option>
+      </select>
+    <button id="submit" type="submit">Sort!</button>
+  </form>
+
