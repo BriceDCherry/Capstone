@@ -11,6 +11,7 @@ import { HouseQuizComponent } from './house-quiz/house-quiz.component';
 import { CommunityComponent } from './community/community.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HouseListComponent } from './house-list/house-list.component';
+import { PersonComponent } from './person/person.component';
 
 
 
@@ -22,7 +23,8 @@ import { HouseListComponent } from './house-list/house-list.component';
     HouseQuizComponent,
     CommunityComponent,
     PageNotFoundComponent,
-    HouseListComponent
+    HouseListComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,

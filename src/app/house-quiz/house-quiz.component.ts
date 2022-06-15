@@ -36,6 +36,7 @@ export class HouseQuizComponent implements OnInit {
       title: this.title,
       house: this.house
     } 
+    alert(`You are a ${newPerson.house}`)
     this.houseService.addPerson(newPerson)
   }
 

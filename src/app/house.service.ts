@@ -13,6 +13,17 @@ interface NewPerson {
   house: string,
 }
 
+export interface Person {
+  id: number,
+  name: string,
+  title: string,
+  house: string,
+}
+
+interface PeopleResponse{
+  peopleList: Person[]
+}
+
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
@@ -56,4 +67,7 @@ export class HouseService {
     return this.http.post(`${peopleEndpoint}`, person, httpOptions).subscribe()
   }
 
+  getPeople() {
+    return this.http.get<PeopleResponse>(peopleEndpoint)
+  }
 }

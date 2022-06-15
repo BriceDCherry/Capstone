@@ -4,7 +4,7 @@ import { CommunityComponent } from './community/community.component';
 import { HouseQuizComponent } from './house-quiz/house-quiz.component';
 import { HouseListComponent } from './house-list/house-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { PersonComponent } from './person/person.component';
 
 
 const routes: Routes = [{
@@ -20,6 +20,9 @@ const routes: Routes = [{
 }, {
   path: "community",
   component: CommunityComponent
+}, {
+  path: "community/:id",
+  component: PersonComponent
 }, {
   path: "**",
   component: PageNotFoundComponent
