@@ -6,7 +6,8 @@ import { HouseComponent } from "src/app/house/house.component";
 
 export const environment = {
   production: false,
-  housesEndpoint: "http://localhost:8080/api/house"
+  housesEndpoint: "http://localhost:8080/api/house",
+  peopleEndpoint: "http://localhost:8080/api/people",
 };
 
 /*

@@ -1,13 +1,26 @@
 import { Injectable } from '@angular/core';
 import { House } from './models/House';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 type HouseRepsonse = {
   houses: House[];
 }
 
+interface NewPerson {
+  name: string,
+  title: string,
+  house: string,
+}
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
+
 const housesEndpoint = environment.housesEndpoint
+const peopleEndpoint = environment.peopleEndpoint
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +50,10 @@ export class HouseService {
 
   fetchHouses() {
     return this.http.get<HouseRepsonse>(housesEndpoint)
+  }
+
+  addPerson(person: NewPerson) {
+    return this.http.post(`${peopleEndpoint}`, person, httpOptions).subscribe()
   }
 
 }
