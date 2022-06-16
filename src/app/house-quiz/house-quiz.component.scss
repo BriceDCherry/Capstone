@@ -1,4 +1,19 @@
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    max-height: 400px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.top-text {
+    text-align: center;
+}
+
 form {
     margin-top: 24px;
+    text-align: center;
 }
 

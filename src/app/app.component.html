@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <header>
   <h1>The Sorting Hat</h1>
-  <nav class="navigation">
-    <ul>
-      <li>
-        <a routerLink="/house">Home</a>
-      </li>
-      <li>
-        <a routerLink="/sort">Get Sorted</a>
-      </li>
-      <li>
-        <a routerLink="/community">Community</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="navigation">
+    <nav>
+      <ul class="bar">
+        <li>
+          <a routerLink="/house">Home</a>
+        </li>
+        <li>
+          <a routerLink="/sort">Get Sorted</a>
+        </li>
+        <li>
+          <a routerLink="/community">Community</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
-  
+
   <router-outlet></router-outlet>
-  
+
 </main>
