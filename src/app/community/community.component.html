@@ -5,21 +5,21 @@
             <h3>
                 {{person.name}}
             </h3>
-        </a>   
-            <p>Congrats you are a {{person.title}}</p>
-            <p>Welcome to house :{{person.house}}</p>
-            <p>Location: {{person.location}}</p>
-            <button (click)="toggleEdit()">Edit</button>
-            <button (click)="deletePerson(person)">Delete</button>
-            <form *ngIf="edit" #sortForm="ngForm" class="resort-form" (ngSubmit)="editPerson(person)">
-                
-                <label for="title">Title</label>
-                <select name="title" [(ngModel)]="person.title">
-                    <option value="Wizard">Wizard</option>
-                    <option value="Witch">Witch</option>
-                  </select>
-                <button id="submit" type="submit">Save</button>
-              </form>
-        
+        </a>
+        <p>Congrats you are a {{person.title}}</p>
+        <p>Welcome to house :{{person.house}}</p>
+        <p>Location: {{person.location}}</p>
+        <button (click)="toggleEdit()">Edit</button>
+        <button (click)="deletePerson(person)">Delete</button>
+        <form *ngIf="edit" #sortForm="ngForm" class="resort-form" (ngSubmit)="editPerson(person)">
+
+            <label for="title">Title</label>
+            <select name="title" [(ngModel)]="person.title">
+                <option value="Wizard">Wizard</option>
+                <option value="Witch">Witch</option>
+            </select>
+            <button id="submit" type="submit">Save</button>
+        </form>
+
     </li>
 </ul>

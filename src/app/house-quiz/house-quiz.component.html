@@ -1,18 +1,17 @@
 <div class="image">
-    <img src="https://www.pngmart.com/files/12/Sorting-Hat-PNG-Clipart.png"/>
+    <img src="https://www.pngmart.com/files/12/Sorting-Hat-PNG-Clipart.png" />
 </div>
 <div class="top-text">
     <h4>The Sorting Hat</h4>
     <span>Let's find you a house!</span>
 </div>
 <form #sortForm="ngForm" class="sort-form" (ngSubmit)="sort()">
-    <label  class="name-form" for="name">Name</label>
-    <input type="text" name="name" id="name" placeholder="Harry Potter, etc." [(ngModel)]="name" required >
-    <label class="title-form"  for="title">Title</label>
+    <label class="name-form" for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Harry Potter, etc." [(ngModel)]="name" required>
+    <label class="title-form" for="title">Title</label>
     <select name="title" [(ngModel)]="title">
         <option value="wizard">Wizard</option>
         <option value="witch">Witch</option>
-      </select>
+    </select>
     <button id="submit" type="submit">Sort!</button>
-  </form>
-
+</form>
