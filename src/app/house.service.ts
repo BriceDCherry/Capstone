@@ -7,10 +7,20 @@ type HouseRepsonse = {
   houses: House[];
 }
 
+type LocationResponse = {
+  country: string,
+	ip: string
+}
+
+type PersonResponse = {
+  peopleList: Person
+}
+
 interface NewPerson {
   name: string,
   title: string,
   house: string,
+  location: string
 }
 
 export interface Person {
@@ -18,6 +28,7 @@ export interface Person {
   name: string,
   title: string,
   house: string,
+  location: string,
 }
 
 interface PeopleResponse{
@@ -69,5 +80,17 @@ export class HouseService {
 
   getPeople() {
     return this.http.get<PeopleResponse>(peopleEndpoint)
+  }
+
+  getLocation() {
+    return this.http.get<LocationResponse>("https://api.country.is/")
+  }
+
+  editPerson(person: Person) {
+    return this.http.put<PersonResponse>(`${peopleEndpoint}/${person.id}`, person)
+  }
+
+  deletePerson(id: number) {
+    return this.http.delete(`${peopleEndpoint}/${id}`)
   }
 }

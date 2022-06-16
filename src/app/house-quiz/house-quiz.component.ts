@@ -13,9 +13,11 @@ export class HouseQuizComponent implements OnInit {
   title: string=""
   randomizer: number=0
   house: string=""
+  location: string=""
   constructor(private houseService: HouseService) { }
 
   ngOnInit(): void {
+    this.houseService.getLocation().subscribe(response => this.location = response.country)
   }
 
   sort() {
@@ -34,7 +36,8 @@ export class HouseQuizComponent implements OnInit {
     const newPerson = {
       name: this.name,
       title: this.title,
-      house: this.house
+      house: this.house,
+      location: this.location
     } 
     alert(`You are a ${newPerson.house}`)
     this.houseService.addPerson(newPerson)

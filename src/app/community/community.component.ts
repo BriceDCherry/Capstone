@@ -9,6 +9,7 @@ import { Person } from '../house.service';
 })
 export class CommunityComponent implements OnInit {
   people: Person[] = []
+  edit: boolean=false
   constructor(private houseService: HouseService) {}
 
   ngOnInit(): void {
@@ -16,6 +17,19 @@ export class CommunityComponent implements OnInit {
       return this.people = response.peopleList
     })
   }
-  
+  editPerson(person: Person) {
+    this.houseService.editPerson(person).subscribe()
+    this.toggleEdit()
+  }
+
+  toggleEdit() {
+    this.edit = !this.edit
+  }
+
+  deletePerson(person: Person) {
+    this.houseService.deletePerson(person.id).subscribe(() => {
+      this.people = this.people.filter(p => p.id !== person.id)
+    })
+  }
 
 }
